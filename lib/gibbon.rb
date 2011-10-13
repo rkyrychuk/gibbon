@@ -60,7 +60,7 @@ protected
   end
 
   def dc_from_api_key
-    (@api_key.blank? or @api_key !~ /-/) ? '' : "#{@api_key.split("-").last}."
+    (@api_key.nil? || @api_key.empty? || @api_key !~ /-/) ? '' : "#{@api_key.split("-").last}."
   end
 end
 
